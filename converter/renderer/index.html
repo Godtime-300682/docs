@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'" />
+  <title>NeoConverter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <div id="dropzone" class="dropzone" tabindex="0">
+      <span id="dropzone-title" class="dropzone-title">Arraste um arquivo aqui</span>
+      <span id="dropzone-hint" class="dropzone-hint">ou clique para escolher</span>
+    </div>
+
+    <div id="formats" class="formats hidden">
+      <div id="video-row" class="pill-row hidden">
+        <span class="row-label">Vídeo</span>
+        <div id="video-pills" class="pills"></div>
+      </div>
+      <div id="audio-row" class="pill-row hidden">
+        <span class="row-label">Áudio</span>
+        <div id="audio-pills" class="pills"></div>
+      </div>
+    </div>
+
+    <button id="convert" class="convert" disabled>Converter</button>
+
+    <div id="progress-track" class="progress-track hidden">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+    <p id="status" class="status"></p>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
